@@ -1,0 +1,1 @@
+export const clearError = () => ({ type: 'error/ERROR_CLEARED' })

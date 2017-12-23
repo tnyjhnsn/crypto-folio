@@ -1,0 +1,145 @@
+@tailwind preflight;
+
+@import "https://fonts.googleapis.com/css?family=Barlow:200,300,400,600|Source+Code+Pro:200,400";
+
+body, html {
+  background-color: #343a40;
+  @apply font-sans;
+}
+
+/*
+ * ORDER OF ATTRIBUTES
+ * flex, alignment, width/height, sizes, background, colour, text, border
+ */
+
+.landing-img {
+  background-image: url("../images/chuttersnap-366884.jpg");
+}
+
+.landing {
+  @apply .landing-img;
+  @apply bg-cover bg-no-repeat bg-center bg-scroll;
+  @apply .flex .flex-col;
+  @apply .justify-between .items-center;
+  @apply .h-screen;
+}
+
+.logo {
+  @apply .text-white .text-4xl;
+}
+
+.logo-moon {
+  @apply .font-normal .text-3xl;
+}
+
+.logo-my {
+  @apply .font-thin;
+}
+
+.logo-crypto {
+  @apply .font-semibold;
+}
+
+.logo-folio {
+  @apply .font-thin;
+}
+
+.form {
+  @apply .flex .flex-col;
+  @apply .justify-center .items-center;
+  @apply .mb-8;
+}
+
+.input {
+  @apply .w-64;
+  @apply .py-2 .px-4 .m-1;
+  @apply .border .border-blue;
+}
+
+.error-panel {
+  @apply .flex;
+  @apply .items-center .justify-between;
+  @apply .w-64;
+  @apply .py-2 .pl-4 .m-1;
+  @apply .bg-grey-lightest;
+  @apply .font-normal .text-red-dark;
+  @apply .border .border-red;
+}
+
+.btn {
+  @apply .py-2 .px-4 .m-1;
+  @apply .font-normal .tracking-wide;
+  @apply .border;
+}
+
+.btn-auth {
+  @apply .bg-black;
+  @apply .text-blue;
+  @apply border-blue; 
+}
+
+.btn-auth:hover {
+  @apply .bg-blue-dark;
+  @apply .text-white;
+  @apply .border-transparent;
+}
+
+.heading {
+  @apply .landing-img;
+  @apply bg-cover bg-no-repeat bg-scroll;
+  @apply .flex;
+  @apply .justify-center .items-center;
+  @apply .h-12 mb-2;
+}
+
+.welcome {
+  @apply .flex;
+  @apply .justify-center .items-center;
+  @apply .font-thin .text-xl .text-white;
+}
+
+.number {
+  font-family: "Barlow";
+}
+
+.portfolio-container {
+  @apply .flex;
+  @apply .items-center .justify-center;
+}
+
+.coin-container {
+  @apply .flex;
+  @apply .items-center .justify-between;
+  @apply .w-9/10;
+  @apply .border-b;
+}
+
+.coin-list {
+  @apply .flex .flex-col;
+  @apply .justify-center .items-center;
+  @apply .w-4/5;
+  @apply .py-2;
+  @apply .leading-normal;
+}
+
+.coin {
+  @apply .number;
+  @apply .font-thin .text-2xl .text-white;
+}
+
+.coin-alt {
+  @apply .text-xl .text-grey-casper;
+}
+
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+  @apply .font-thin .text-xs .text-white;
+}
+
+@screen md {
+  .coin-container {
+    @apply w-1/4;
+  }
+}
+
+@tailwind utilities;
