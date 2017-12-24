@@ -710,7 +710,6 @@ html {
 
 .portfolio-container {
   display: flex;
-  align-items: center;
   justify-content: center;
 }
 
@@ -719,17 +718,15 @@ html {
   align-items: center;
   justify-content: space-between;
   width: 90%;
-  border-bottom-width: 1px;
 }
 
 .coin-list {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   width: 80%;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+  text-align: center;
   line-height: 1.5;
 }
 
@@ -743,6 +740,15 @@ html {
 .coin-alt {
   font-size: 1.25rem;
   color: #adb5bd;
+}
+
+.fab {
+  appearance: none;
+  cursor: pointer;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 a:link,

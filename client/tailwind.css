@@ -104,22 +104,20 @@ body, html {
 
 .portfolio-container {
   @apply .flex;
-  @apply .items-center .justify-center;
+  @apply .justify-center;
 }
 
 .coin-container {
   @apply .flex;
   @apply .items-center .justify-between;
   @apply .w-9/10;
-  @apply .border-b;
 }
 
 .coin-list {
   @apply .flex .flex-col;
-  @apply .justify-center .items-center;
   @apply .w-4/5;
   @apply .py-2;
-  @apply .leading-normal;
+  @apply .text-center .leading-normal;
 }
 
 .coin {
@@ -131,6 +129,11 @@ body, html {
   @apply .text-xl .text-grey-casper;
 }
 
+.fab {
+  appearance: none;
+  cursor: pointer;
+  @apply .py-2 .px-4;
+}
 a:link, a:visited, a:hover, a:active {
   text-decoration: none;
   @apply .font-thin .text-xs .text-white;

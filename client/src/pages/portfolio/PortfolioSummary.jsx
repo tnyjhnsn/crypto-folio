@@ -24,11 +24,11 @@ const PortfolioSummary = ({ user, isLoading, refreshPrices }) => {
           </div>
           <div className="flex flex-col">
             <span
-              className="appearance-none py-2 px-4 text-blue"
+              className="fab text-blue"
               onClick={refreshPrices}>
               <i className={refreshIcon} />
             </span>
-            <Link to="/create" className="appearance-none py-2 px-4">
+            <Link to="/create" className="fab">
               <i className="fa fa-plus-circle fa-3x text-green" />
             </Link>
           </div>

@@ -97,17 +97,17 @@ class SaveCoin extends React.Component {
           </div>
           <div className="flex items-center">
             <span
-              className="appearance-none py-2 px-4 text-blue"
+              className="fab text-blue"
               onClick={this.getCoinsList}>
               <i className="fa fa-cog fa-2x" />
             </span>
             <span
-              className="appearance-none py-2 px-4 text-red"
+              className="fab text-red"
               onClick={this.handleCancel}>
               <i className="fa fa-times-circle fa-2x" />
             </span>
             <span
-              className="appearance-none py-2 px-4 text-green"
+              className="fab text-green"
               onClick={this.submit}>
               <i className="fa fa-check-circle fa-2x" />
             </span>

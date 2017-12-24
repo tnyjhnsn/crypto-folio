@@ -15,7 +15,7 @@ class PortfolioList extends React.Component {
       const { _id, name, amount, AUD, USD, BTC } = coin
       return (
         <div key={i} className="portfolio-container">
-          <div className="coin-container">
+          <div className="coin-container border-t">
             <div className="coin-list">
               <div className="coin font-normal text-2xl">{cryptoCurrency(amount, name)}</div>
               <div className="coin coin-alt">{secondaryCurrency(AUD, 'AUD')}</div>
@@ -24,11 +24,11 @@ class PortfolioList extends React.Component {
             </div>
             <div className="flex flex-col">
               <span
-                className="appearance-none py-2 px-4"
+                className="fab"
                 onClick={this.deleteCoin(coin)}>
                 <i className="fa fa-minus-circle fa-2x text-red" />
               </span>
-              <Link to={`/edit/${_id}`} className="appearance-none py-2 px-4">
+              <Link to={`/edit/${_id}`} className="fab">
                 <i className="fa fa-pencil fa-3x text-blue" />
               </Link>
             </div>
