@@ -3,7 +3,7 @@ import React from 'react'
 import Logo from './Logo'
 import ErrorPanel from '../common/ErrorPanelContainer'
 
-class Austh extends React.Component {
+class Auth extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
