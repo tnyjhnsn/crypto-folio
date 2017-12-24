@@ -4,7 +4,7 @@ import { cryptoCurrency, secondaryCurrency } from './format-utils'
 
 class PortfolioList extends React.Component {
 
-  deleteCoin = (coin) => (event) => {
+  deleteCoin = coin => event => {
     const { deleteCoin } = this.props
     deleteCoin(coin)
   }

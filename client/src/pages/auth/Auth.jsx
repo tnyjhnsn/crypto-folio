@@ -3,13 +3,9 @@ import React from 'react'
 import Logo from './Logo'
 import ErrorPanel from '../common/ErrorPanelContainer'
 
-class Auth extends React.Component {
+class Austh extends React.Component {
   constructor(props) {
     super(props)
-    this.handleInputChange = this.handleInputChange.bind(this)
-    this.handleKeyPress = this.handleKeyPress.bind(this)
-    this.submitLogin = this.submitLogin.bind(this)
-    this.submitRegister = this.submitRegister.bind(this)
     this.state = {
       username: '',
       password: ''
@@ -20,18 +16,18 @@ class Auth extends React.Component {
     this.setState({ [key]: event.target.value })
   }
 
-  handleKeyPress(target) {
+  handleKeyPress = target => {
     if (target.charCode === 13) {
       target.preventDefault()
     }
   }
 
-  submitRegister() {
+  submitRegister = () => {
     const { register } = this.props
     register(this.state)
   }
 
-  submitLogin() {
+  submitLogin = () => {
     const { login } = this.props
     login(this.state)
   }
