@@ -52,8 +52,9 @@ class SaveCoin extends React.Component {
   }
 
   getCoinsList = () => {
-    const { coinsList, refreshCoinsList } = this.props
+    const { coinsList, refreshCoinsList, progress } = this.props
     if (!coinsList.length) {
+      progress()
       refreshCoinsList()
     }
   }
@@ -70,7 +71,14 @@ class SaveCoin extends React.Component {
         <Redirect to="/portfolio" />
       )
     }
+    const { isLoading } = this.props
+    console.log('ISLOADING', isLoading)
     const { coin: { name, amount } } = this.state
+    const cogIcon = [
+      'fa',
+      `fa-${isLoading ? 'cog fa-spin' : 'cog'}`,
+      'fa-2x'
+    ].join(' ')
     return (
       <div>
         <Header />
@@ -99,7 +107,7 @@ class SaveCoin extends React.Component {
             <span
               className="fab text-blue"
               onClick={this.getCoinsList}>
-              <i className="fa fa-cog fa-2x" />
+              <i className={cogIcon} />
             </span>
             <span
               className="fab text-red"

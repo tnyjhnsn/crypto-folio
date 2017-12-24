@@ -7,6 +7,7 @@ export default (state = initialState, action) => {
     case 'progress/PROGRESS':
       return true
     case 'market/MARKET_SUCCESS':
+    case 'market/COINS_LIST_SUCCESS':
       return false
     default: return state
   }
