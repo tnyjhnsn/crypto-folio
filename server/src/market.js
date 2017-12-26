@@ -9,23 +9,19 @@ module.exports = {
     if (!user) {
       return socket.emit('action', { type: 'market/USER_NOT_FOUND', error: 'That user not found' })
     }
-    const fsyms = []
-    user.portfolio.forEach((coin) => {
-      fsyms.push(coin.name)
-    })
+    const fsyms = user.portfolio.map(coin => coin.name)
     const prices = await axios({
       url: `https://min-api.cryptocompare.com/data/pricemulti?fsyms=${fsyms}&tsyms=BTC,USD,AUD`,
       method: 'get'
     })
-    const coins = []
-    Object.entries(prices.data).forEach((price) => {
+    const coins = Object.entries(prices.data).map((price) => {
       const { AUD, USD, BTC } = price[1]
-      coins.push({
+      return {
         name: price[0],
         AUD,
         USD,
         BTC
-      })
+      }
     })
     const portfolio = createPortfolio(user.portfolio, coins)
     return socket.emit('action', { type: 'market/MARKET_SUCCESS', portfolio })

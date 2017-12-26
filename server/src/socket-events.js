@@ -8,7 +8,7 @@ const connections = {
 module.exports = (io) => {
   io.on('connection', (socket) => {
     connections.number += 1
-    socket.on('action', async (action) => {
+    socket.on('action', (action) => {
       switch (action.type) {
         case 'auth/REGISTER':
           return auth.register(socket, action.credentials)
