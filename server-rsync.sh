@@ -1,2 +1,2 @@
 #!/bin/bash
-rsync -avz --delete-after server root@stratus:/var/www/tosp/fcc/node/crypto-folio
+rsync -avz --delete-after server tony@stratus:/var/www/tosp/fcc/node/crypto-folio
